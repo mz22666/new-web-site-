@@ -278,3 +278,17 @@ nav a:not(.btn):hover::after,nav a.active::after{width:100%}
 .pay-card dd{display:flex;align-items:center;justify-content:space-between;gap:.8rem;font-weight:600;word-break:break-all}
 .copy-btn{flex:none;border:1.5px solid var(--green);background:none;color:var(--green);border-radius:50px;padding:.2rem .9rem;font:600 .78rem Poppins;cursor:pointer;transition:.2s}
 .copy-btn:hover,.copy-btn.done{background:var(--green);color:#fff}
+
+/* pay now links + summary */
+.paylink{display:block;margin-top:.9rem;font-weight:600;font-size:.9rem;color:#0c7a4b;text-align:center}
+.paylink:hover{text-decoration:underline}
+.pay-box select{margin-bottom:.3rem}
+.summary{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:linear-gradient(135deg,#1b2421,#0f6b45);color:#fff;border-radius:var(--r);padding:1.2rem 1.4rem}
+.summary[hidden]{display:none}
+.summary small{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-l)}
+.summary b#s-name{display:block;font-family:'Playfair Display',serif;font-size:1.3rem}
+.summary #s-info{font-size:.82rem;color:#cfe3d6}
+.summary .amount{text-align:right}
+.summary .amount b{display:block;font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--gold)}
+.summary .amount span{font-size:.8rem;color:#cfe3d6}
+.pay-sub b{color:#0c7a4b}
