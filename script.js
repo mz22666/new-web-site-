@@ -1,5 +1,5 @@
 // Set this to your WhatsApp number (country code, no + or spaces)
-const WHATSAPP = '923000000000';
+const WHATSAPP = '923194499418';
 
 const menu = document.getElementById('menu');
 const burger = document.getElementById('burger');
@@ -73,7 +73,9 @@ document.getElementById('form').addEventListener('submit', e => {
   e.preventDefault();
   const f = new FormData(e.target);
   const text = `Assalamu Alaikum!\nName: ${f.get('name')}\nPhone: ${f.get('phone')}\nCourse: ${f.get('topic')}\nMessage: ${f.get('msg') || '-'}`;
-  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+  const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+  // open in a new tab; if the browser blocks the popup, open in this tab instead
+  if (!window.open(url, '_blank')) location.href = url;
 });
 
 document.getElementById('yr').textContent = new Date().getFullYear();
