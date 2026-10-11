@@ -1,5 +1,5 @@
 // Set this to your WhatsApp number (country code, no + or spaces)
-const WHATSAPP = '923194499418';
+const WHATSAPP = '923194499481';
 
 const menu = document.getElementById('menu');
 const burger = document.getElementById('burger');
