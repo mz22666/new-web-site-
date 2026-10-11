@@ -79,3 +79,13 @@ document.getElementById('form').addEventListener('submit', e => {
 });
 
 document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Copy buttons in the payment section
+document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', async () => {
+  const text = b.previousElementSibling.textContent.trim();
+  try { await navigator.clipboard.writeText(text); } catch (_) {
+    const t = document.createElement('textarea'); t.value = text; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove();
+  }
+  b.textContent = 'Copied ✓'; b.classList.add('done');
+  setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('done'); }, 1600);
+}));
