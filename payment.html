@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payment — Miftah ul Quran Global Institute</title>
+<meta name="description" content="Choose your payment method and get the payment details for Miftah ul Quran Global Institute.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="container nav">
+    <a href="index.html" class="logo"><span class="logo-mark">م</span><span>Miftah ul Quran <small>Global Institute</small></span></a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="menu">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#courses">Courses</a>
+      <a href="index.html#packages">Packages</a>
+      <a href="payment.html" class="active">Payment</a>
+      <a href="index.html#contact" class="btn btn-gold btn-sm">Free Trial</a>
+    </nav>
+  </div>
+</header>
+
+<section class="pay-hero">
+  <div class="container">
+    <p class="arabic">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+    <h1>Payment</h1>
+    <p class="lead">Select how you would like to pay and we will show you the details.</p>
+  </div>
+</section>
+
+<section class="section pay-page">
+  <div class="container narrow">
+
+    <div class="pay-box">
+      <label for="method">Choose payment method</label>
+      <select id="method">
+        <option value="">— Select payment method —</option>
+        <option value="bank">🏦 Bank Account Transfer</option>
+        <option value="payoneer">💳 Payoneer</option>
+      </select>
+      <p class="pay-hint" id="hint">Please select a payment method above to see the payment details.</p>
+
+      <div class="pay-card detail" id="d-bank" hidden>
+        <div class="pay-head"><span class="pay-ico">🏦</span><h3>Bank Account Transfer</h3></div>
+        <p class="pay-sub">Send the amount to the account below, then send us the receipt on WhatsApp.</p>
+        <dl>
+          <div><dt>Bank Name</dt><dd><span>[Your Bank Name]</span></dd></div>
+          <div><dt>Account Title</dt><dd><span>[Account Holder Name]</span><button class="copy-btn" type="button">Copy</button></dd></div>
+          <div><dt>Account Number</dt><dd><span>[Your Account Number]</span><button class="copy-btn" type="button">Copy</button></dd></div>
+          <div><dt>IBAN</dt><dd><span>[Your IBAN]</span><button class="copy-btn" type="button">Copy</button></dd></div>
+          <div><dt>SWIFT / BIC</dt><dd><span>[Your SWIFT Code]</span><button class="copy-btn" type="button">Copy</button></dd></div>
+          <div><dt>Branch</dt><dd><span>[Branch Name &amp; City]</span></dd></div>
+        </dl>
+      </div>
+
+      <div class="pay-card detail" id="d-payoneer" hidden>
+        <div class="pay-head"><span class="pay-ico">💳</span><h3>Payoneer</h3></div>
+        <p class="pay-sub">Send the amount to the Payoneer account below, then send us the receipt on WhatsApp.</p>
+        <dl>
+          <div><dt>Account Name</dt><dd><span>[Your Name / Institute Name]</span><button class="copy-btn" type="button">Copy</button></dd></div>
+          <div><dt>Payoneer Email</dt><dd><span>[your-payoneer-email@example.com]</span><button class="copy-btn" type="button">Copy</button></dd></div>
+          <div><dt>Payoneer ID</dt><dd><span>[Your Payoneer ID]</span><button class="copy-btn" type="button">Copy</button></dd></div>
+        </dl>
+      </div>
+
+      <a id="receipt" class="btn btn-gold receipt" href="#" target="_blank" rel="noopener" hidden>📤 Send Payment Receipt on WhatsApp</a>
+    </div>
+
+    <p class="back"><a href="index.html#packages">← Back to packages</a></p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p class="copyright">© <span id="yr"></span> Miftah ul Quran Global Institute. All rights reserved.</p>
+</footer>
+
+<a class="wa" href="https://wa.me/923194499481" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script src="pay.js"></script>
+</body>
+</html>
