@@ -72,7 +72,7 @@ document.querySelectorAll('[data-course]').forEach(a => a.addEventListener('clic
 document.getElementById('form').addEventListener('submit', e => {
   e.preventDefault();
   const f = new FormData(e.target);
-  const text = `Assalamu Alaikum!\nName: ${f.get('name')}\nPhone: ${f.get('phone')}\nCourse: ${f.get('topic')}\nDays: ${f.get('days')}\nMessage: ${f.get('msg') || '-'}`;
+  const text = `Assalamu Alaikum!\nName: ${f.get('name')}\nPhone: ${f.get('phone')}\nCourse: ${f.get('topic')}\nMessage: ${f.get('msg') || '-'}`;
   window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
 });
 
